@@ -3,7 +3,7 @@ package multisense;
 // Generic State Message 
 // equivalent to ROS joint states message
 
-struct joint_state_t
+struct state_t
 {
   int64_t  utime;
   
