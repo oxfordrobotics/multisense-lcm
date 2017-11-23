@@ -8,7 +8,7 @@ project(multisense_lcm)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  multisense_lib
+  multisense_lib multisense_lcmtypes
 )
 
 find_package(ZLIB REQUIRED)
@@ -17,9 +17,6 @@ find_package( OpenCV REQUIRED )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-
-include(cmake/lcmtypes.cmake)
-lcmtypes_build()
 
 #execute_process(COMMAND mkdir -p include)
 #add_custom_target(lcmgen_cpp ALL
@@ -113,7 +110,7 @@ lcmtypes_build()
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS lcmtypes/cpp
+#  INCLUDE_DIRS include
 #  LIBRARIES multisense_lcm
 #  CATKIN_DEPENDS multisense_lib
 #  DEPENDS system_lib
