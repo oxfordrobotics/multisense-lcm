@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(multisense_lcm)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
+
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
