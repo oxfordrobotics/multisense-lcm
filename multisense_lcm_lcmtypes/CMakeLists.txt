@@ -102,8 +102,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES multisense_lcm_lcmtypes
-#  CATKIN_DEPENDS lcm_catkin
+  LIBRARIES multisense_lcm_lcmtypes
+  CATKIN_DEPENDS lcm_catkin
 #  DEPENDS system_lib
 )
 
@@ -111,6 +111,10 @@ catkin_package(
 ## Build ##
 ###########
 
+FILE(GLOB type_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/lcmtypes/" "*.lcm")
+MESSAGE( STATUS "type_files: " ${type_files} )
+AddLCM(${type_files})
+GenerateLCM()
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
