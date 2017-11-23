@@ -111,8 +111,7 @@ catkin_package(
 ## Build ##
 ###########
 
-FILE(GLOB type_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/lcmtypes/" "*.lcm")
-MESSAGE( STATUS "type_files: " ${type_files} )
+FILE(GLOB type_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/lcmtypes" "${CMAKE_CURRENT_SOURCE_DIR}/lcmtypes/*.lcm")
 AddLCM(${type_files})
 GenerateLCM()
 ## Specify additional locations of header files
