@@ -12,7 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 find_package(ZLIB REQUIRED)
-find_package(lcm REQUIRED)
+find_package( LCM REQUIRED)
 find_package( OpenCV REQUIRED )
 
 ## System dependencies are found with CMake's conventions
