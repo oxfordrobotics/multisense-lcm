@@ -17,7 +17,7 @@ find_package(ZLIB REQUIRED)
 find_package( LCM REQUIRED)
 find_package( OpenCV REQUIRED )
 #find_package( multisense_lib REQUIRED )
-find_package(LibMultiSense REQUIRED)
+#find_package(LibMultiSense REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -115,8 +115,8 @@ find_package(LibMultiSense REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-#  LIBRARIES multisense_lcm
-#  CATKIN_DEPENDS multisense_lib
+  LIBRARIES multisense_lcm
+  CATKIN_DEPENDS multisense_lib
 #  DEPENDS system_lib
 )
 
@@ -129,6 +129,7 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
+  ${multisense_lib_INCLUDE_DIRS}
   )
   
   ## Declare a C++ library
