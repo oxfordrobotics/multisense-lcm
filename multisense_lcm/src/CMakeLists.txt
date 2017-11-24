@@ -2,6 +2,8 @@ set(DRIVER_NAME multisense-lcm-driver)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++0x -Wno-deprecated-declarations -Wreturn-type -Wuninitialized -Wunused-variable")
 
+include_directories(${LibMultiSense_INCLUDE_DIRS})
+
 add_executable(${DRIVER_NAME}
   Sensor.cpp
   Imu.cpp
