@@ -15,8 +15,8 @@ add_executable(${DRIVER_NAME}
 
 target_link_libraries(${DRIVER_NAME} ${ZLIB_LIBRARIES} ${LIBMULTISENSE_LIBRARIES})
 
-pods_use_pkg_config_packages(${DRIVER_NAME}
-  lcm opencv
-)
-
-pods_install_executables(${DRIVER_NAME})
+#pods_use_pkg_config_packages(${DRIVER_NAME}
+#  lcm opencv
+#)
+#
+#pods_install_executables(${DRIVER_NAME})
