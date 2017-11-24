@@ -1,7 +1,7 @@
 #include "Laser.hpp"
 
 #include <iostream>
-#include <MultiSense/MultiSenseChannel.hh>
+#include <multisense_lib/MultiSenseChannel.hh>
 #include <lcm/lcm-cpp.hpp>
 #include <lcmtypes/multisense/joint_state_t.hpp>
 #include <lcmtypes/multisense/planar_lidar_t.hpp>
