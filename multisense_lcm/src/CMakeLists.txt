@@ -13,6 +13,9 @@ add_executable(${DRIVER_NAME}
   Main.cpp
 )
 
+# I don't know if this is needed:
+#add_dependencies(${DRIVER_NAME} ${catkin_EXPORTED_TARGETS})
+
 target_link_libraries(${DRIVER_NAME} ${catkin_LIBRARIES} ${ZLIB_LIBRARIES} ${multisense_lib_LIBRARIES})
 
 #pods_use_pkg_config_packages(${DRIVER_NAME}
