@@ -91,6 +91,8 @@ find_package(catkin REQUIRED COMPONENTS
 #   cfg/DynReconf2.cfg
 # )
 
+execute_process( COMMAND mkdir -p "${CATKIN_DEVEL_PREFIX}/include" )
+
 ###################################
 ## catkin specific configuration ##
 ###################################
@@ -101,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+  INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include
   LIBRARIES multisense_lcmtypes
   CATKIN_DEPENDS lcm_catkin
 #  DEPENDS system_lib
